@@ -29,17 +29,21 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_
 ###  模型训练与评分
 ···
 """逻辑回归"""
+
 lg = LogisticRegression(random_state=2018)
 lg.fit(x_train, y_train)
 
 """SVM"""
+
 svc = svm.SVC(random_state=2018)
 svc.fit(x_train, y_train)
 """决策树"""
+
 dt = DecisionTreeClassifier(random_state=2018)
 dt.fit(x_train, y_train)
 
 """输出结果"""
+
 print(lg.score(x_test, y_test))
 print(dt.score(x_test, y_test))
 print(svc.score(x_test, y_test))
