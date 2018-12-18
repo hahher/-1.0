@@ -35,7 +35,6 @@ lg.fit(x_train, y_train)
 """SVM"""
 svc = svm.SVC(random_state=2018)
 svc.fit(x_train, y_train)
-
 """决策树"""
 dt = DecisionTreeClassifier(random_state=2018)
 dt.fit(x_train, y_train)
@@ -48,5 +47,7 @@ print(svc.score(x_test, y_test))
 
 ### 模型评分
 0.7484232655921513
+
 0.6846531184302733
+
 0.7484232655921513
