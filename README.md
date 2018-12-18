@@ -16,7 +16,7 @@ from sklearn import svm
 ###  数据导入和划分训练集,测试集
 
 训练集和测试集三七分， "status" 是结果标签：0表示未逾期，1表示逾期，随机种子2018，使用pandas.drop函数进行分割标签
-'''
+```
 """ 读入数据"""
 data_all = pd.read_csv('data_all.csv', encoding='gbk')
 
@@ -24,5 +24,4 @@ data_all = pd.read_csv('data_all.csv', encoding='gbk')
 x = data_all.drop(['status'], axis=1)
 y = data_all['status']
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=2018)
-
-'''
+```
